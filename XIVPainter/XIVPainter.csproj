@@ -1,56 +1,57 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFramework>net7.0-windows</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Authors>ArchiTed</Authors>
-        <Version>2.9.1.1</Version>
-        <PlatformTarget>x64</PlatformTarget>
-        <Platforms>x64</Platforms>
-        <DalamudLibPath>$(AppData)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
-        <GenerateDocumentationFile>True</GenerateDocumentationFile>
-        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<PropertyGroup>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Authors>ArchiTed</Authors>
+		<Version>2.9.1.1</Version>
+		<PlatformTarget>x64</PlatformTarget>
+		<Platforms>x64</Platforms>
+		<DalamudLibPath>$(AppData)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-    </PropertyGroup>
-    <ItemGroup>
-        <PackageReference Include="Clipper2" Version="1.2.3" />
-        <PackageReference Include="KdTree" Version="1.4.1" />
-        <PackageReference Include="LibTessDotNet" Version="1.1.15" />
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Clipper2" Version="1.2.3" />
+		<PackageReference Include="KdTree" Version="1.4.1" />
+		<PackageReference Include="LibTessDotNet" Version="1.1.15" />
+		
+		<Reference Include="Dalamud">
+			<HintPath>$(DalamudLibPath)Dalamud.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="ImGui.NET">
+			<HintPath>$(DalamudLibPath)ImGui.NET.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="ImGuiScene">
+			<HintPath>$(DalamudLibPath)ImGuiScene.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Lumina">
+			<HintPath>$(DalamudLibPath)Lumina.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Lumina.Excel">
+			<HintPath>$(DalamudLibPath)Lumina.Excel.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="FFXIVClientStructs">
+			<HintPath>$(DalamudLibPath)FFXIVClientStructs.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Newtonsoft.Json">
+			<HintPath>$(DalamudLibPath)Newtonsoft.Json.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
 
-        <Reference Include="Dalamud">
-            <HintPath>$(DalamudLibPath)Dalamud.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
-        <Reference Include="ImGui.NET">
-            <HintPath>$(DalamudLibPath)ImGui.NET.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
-        <Reference Include="ImGuiScene">
-            <HintPath>$(DalamudLibPath)ImGuiScene.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
-        <Reference Include="Lumina">
-            <HintPath>$(DalamudLibPath)Lumina.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
-        <Reference Include="Lumina.Excel">
-            <HintPath>$(DalamudLibPath)Lumina.Excel.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
-        <Reference Include="FFXIVClientStructs">
-            <HintPath>$(DalamudLibPath)FFXIVClientStructs.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
-        <Reference Include="Newtonsoft.Json">
-            <HintPath>$(DalamudLibPath)Newtonsoft.Json.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
-
-        <Using Include="Dalamud.Game.ClientState.JobGauge.Enums" />
-        <Using Include="Dalamud.Interface" />
-        <Using Include="Newtonsoft.Json" />
-        <Using Include="System.Numerics" />
-        <Using Include="System.Reflection" />
-        <Using Include="ImGuiNET" />
-    </ItemGroup>
+		<Using Include="Dalamud.Game.ClientState.JobGauge.Enums" />
+		<Using Include="Dalamud.Interface" />
+		<Using Include="Newtonsoft.Json" />
+		<Using Include="System.Numerics" />
+		<Using Include="System.Reflection" />
+		<Using Include="ImGuiNET" />
+	</ItemGroup>
 </Project>
