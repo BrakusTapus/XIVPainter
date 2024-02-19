@@ -12,6 +12,7 @@
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
 		<Nullable>enable</Nullable>
+        <LangVersion>preview</LangVersion>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Clipper2" Version="1.2.3" />
